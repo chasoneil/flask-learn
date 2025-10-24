@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 # 模拟一个用户请求 用户发送 order_id
 # 我们返回签名的sign
+# 使用json格式的数据，关注数据的验证
 @app.route("/sign", methods=["POST"])
 def sign():
     """
