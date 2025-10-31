@@ -16,7 +16,7 @@ def index():
 def err():
     return "error"
 
-# 如果希望获取用户通过url 传递的参数
+# 通过URL拼接传递参数
 # 需要导入request
 # 使用url进行测试  http://localhost:5001/param?username=chason
 # 这个方法只支持 get 请求
@@ -26,9 +26,10 @@ def param():
     print("uname: %s" % uname)
     return "success"
 
+# 处理post请求并携带参数
 # post 的参数都在请求体中
 # 测试需要使用postman这样的工具
-@app.route('/param_p', methods=["POST"])
+@app.route('/post_param', methods=["POST"])
 def param_p():
     uname = request.form.get("username")        # 用于获取 form-data 格式的
     print('uname:', uname)

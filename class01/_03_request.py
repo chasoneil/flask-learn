@@ -1,5 +1,6 @@
 
 # 调用api 这里指调用别的api
+# 需要安装requests库  pip install requests
 
 import requests
 

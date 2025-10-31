@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # 用户访问的时候，如果用户的token合法，则让用户访问
 # 否则，拒绝用户的访问
-# 我们编辑一个token.txt 文件，使用 uuid 生成每个用户的uuid 用户访问的时候携带uuid
+# 我们编辑一个token.txt文件，使用 uuid 生成每个用户的uuid 用户访问的时候携带uuid
 
 @app.route("/login", methods=["POST"])
 def login():
